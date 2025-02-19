@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ff5733;
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .logo a {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: yellow;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #ff5733;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                text-align: center;
+            }
+
+            .navbar ul.show {
+                display: flex;
+            }
+
+            .navbar ul li {
+                padding: 15px 0;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            background: linear-gradient(45deg, #ff5733, #ffbd69);
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+        }
+
+        .hero img {
+            width: 250px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f8c471;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about img {
+            width: 200px;
+            height: auto;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #82e0aa;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            background: #ffffff;
+            padding: 20px;
+            margin: 15px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .service h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/64px-JavaScript-logo.png" alt="Logo">
+            <a href="#">Group Webpage</a>
+        </div>
+        <ul id="nav-links">
+            <li><a href="#">Nel Jamer Guan</a></li>
+            <li><a href="#">Raphael Villasana</a></li>
+            <li><a href="#">Michael Bobis</a></li>
+            <li><a href="#">Harold Parreño</a></li>
+            <li><a href="#">Mellix Jay Maalindog</a></li>
+        </ul>
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Our group Webpage</h1>
+        <p>Your one-stop solution for all services. Explore our features and offerings.</p>
+        <img src="https://media.giphy.com/media/l4FGpP4lxGGgK5lS4/giphy.gif" alt="Welcome GIF">
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Us</h2>
+        <p>We provide top-notch services to meet all your needs.</p>
+        <img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" alt="About GIF">
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service">
+                <img src="https://media.giphy.com/media/QHE5gWI0QjqF2/giphy.gif" alt="Web Design">
+                <h3>How can ICT help in learning?</h3>
+                <p>As ICT in education advances informatization, not only teachers who support learning but also students will be able to acquire knowledge and skills of IT devices. literacy will help students to select and use necessary information and to develop the ability to think for themselves.</p>
+            </div>
+            <div class="service">
+                <img src="https://media.giphy.com/media/jt7bAtEijhurm/giphy.gif" alt="SEO">
+                <h3>How can ICT help in reducing trhe burden on teachers?</h3>
+                <p>Streamlining curriculum requirements and assessment processes can also help reduce the burden on teachers, allowing them to concentrate on delivering high-quality instruction.</p>
+            </div>
+            <div class="service">
+                <img src="https://media.giphy.com/media/3o7abldj0b3rxrZUxW/giphy.gif" alt="Marketing">
+                <h3>How Can ICT Help in simplifying innformation sharing?</h3>
+                <p>This benefit is one of the most helpful cause in just one click magic the information was sent to the reciever reciever, it's so simple! it even has a step by step process guide!.</p>
+            </div>
+        </div>
+            <div class="service">
+                <img src="https://media.giphy.com/media/xT5LMHxhOfscxPfIfm/giphy.gif" alt="SEO">
+                <h3>How Can ICT Help in improving IT literacy of students?</h3>
+                <p>Reasons:
+3. * Mabuting Pagpapasiya (Good Decision-Making): Higher literacy leads to better understanding of information, resulting in better decision-making.
+
+ 
+  * Explanation:  Literacy empowers individuals to analyze information, weigh options, and make informed choices in various aspects of life.
+
+
+4. * Mabuting Demokrasya (Good Democracy): Higher literacy leads to better understanding of information about politics and democracy.
+
+ 
+  * Explanation:  A literate populace is better equipped to understand political issues, participate in informed discussions, and make informed choices during elections.
+</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Group Webpage.</p>
+    </footer>
+
+    <!-- JavaScript for Navbar -->
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>
